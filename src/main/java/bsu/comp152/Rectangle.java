@@ -1,7 +1,5 @@
 package bsu.comp152;
 
-import java.util.Objects;
-
 /**
  * A (blueprint) class for creating and manipulating
  * Rectangle objects.
@@ -50,16 +48,10 @@ public class Rectangle {
         return String.format("Rectangle: length %f, width %f", length, width);
     }
 
-    @Override
     public boolean equals(Rectangle other) {
        // placeholder
         // TODO: Complete this part!
         return false;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(length, width);
     }
 
     /**
