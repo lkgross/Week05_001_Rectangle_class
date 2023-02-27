@@ -19,9 +19,14 @@ public class Rectangle {
      * A constructor is public.
      * A constructor has no return type, not even void!
      */
-    public Rectangle(double len, double wid){
-        length = len;
-        width = wid;
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    public Rectangle() {
+        length = 0.0;
+        width = 0.0;
     }
 
     /*
@@ -33,35 +38,40 @@ public class Rectangle {
 
     /**
      * A getter (accessor) in the Rectangle class
+     *
      * @return the length of the rectangle
      */
-    public double getLength(){
+    public double getLength() {
         return length;
     }
 
-    public double getWidth(){
+    public double getWidth() {
         return width;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("Rectangle: length %f, width %f", length, width);
     }
 
     public boolean equals(Rectangle other) {
-       // placeholder
+        // placeholder
         // TODO: Complete this part!
-        return false;
+        return (length == other.length) && (width == other.width);
     }
 
     /**
      * A setter (mutator) in the Rectangle class
      */
-    public void setLength(double len){
+    public void setLength(double len) {
         length = len;
     }
 
-    public void setWidth(double wid){
+    public void setWidth(double wid) {
         width = wid;
+    }
+
+    public Rectangle copy(Rectangle other) {
+        return;
     }
 }

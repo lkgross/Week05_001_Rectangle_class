@@ -1,5 +1,7 @@
 package bsu.comp152;
 
+import org.w3c.dom.css.Rect;
+
 /**
  * Is a (container) class for the Java program we run. It contains a main method with client code (a driver program) to create and manipulate objects using methods from the (blueprint) Rectangle class.
  */
@@ -44,5 +46,22 @@ public class Main {
         System.out.println(rect);
 
         System.out.println(rect.toString());
+        Rectangle rect2 = new Rectangle(10.2, 2.33);
+        System.out.println(rect2);
+        System.out.printf("The two rectangles are equal: %b\n", rect.equals(rect2));
+        Rectangle rect3 = new Rectangle();
+        System.out.println(rect3);
+        /* What happens if you try to use == to compare two objects? You end up comparing the addresses where two objects are stored. DON'T DO THIS! Call an equals method to see if the data is the same for the two objects.
+         */
+        System.out.printf("The two rectangles are equal: %b\n", rect == rect2);
+        // Similarly, don't do a "reference copy".
+        Rectangle rect4 = rect3;
+        rect3.setLength(5.2);
+        System.out.println(rect3);
+        System.out.println(rect4);
+        Rectangle rect5 = new Rectangle();
+        rect5.copy(rect3);
+
+
     }
 }
