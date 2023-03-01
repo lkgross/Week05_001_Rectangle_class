@@ -1,6 +1,6 @@
 package bsu.comp152;
 
-import org.w3c.dom.css.Rect;
+import java.util.ArrayList;
 
 /**
  * Is a (container) class for the Java program we run. It contains a main method with client code (a driver program) to create and manipulate objects using methods from the (blueprint) Rectangle class.
@@ -59,9 +59,14 @@ public class Main {
         rect3.setLength(5.2);
         System.out.println(rect3);
         System.out.println(rect4);
-        Rectangle rect5 = new Rectangle();
-        rect5.copy(rect3);
+        Rectangle rect5 = rect3.copy();
+        Rectangle rect6 = new Rectangle(rect3);
+        System.out.println("rect3: " + rect3);
+        System.out.println("rect5: " + rect5);
+        System.out.println("rect6: " + rect6);
 
-
+        ArrayList<Rectangle> rectangleList = new ArrayList<Rectangle>();
+        rectangleList.add(rect);
+        rectangleList.add(rect2);
     }
 }

@@ -1,5 +1,7 @@
 package bsu.comp152;
 
+import org.w3c.dom.css.Rect;
+
 /**
  * A (blueprint) class for creating and manipulating
  * Rectangle objects.
@@ -19,6 +21,14 @@ public class Rectangle {
      * A constructor is public.
      * A constructor has no return type, not even void!
      */
+
+    /*
+     * Methods (including constructors) can be overloaded:
+     * You can write multiple methods that have the same name,
+     * as long as the "signatures" are different.
+     * The signature consists of the method's name and the types of the parameters, in the order in which they appear.
+     * (The method's return type is not part of the signature.)
+     */
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
@@ -28,6 +38,15 @@ public class Rectangle {
         length = 0.0;
         width = 0.0;
     }
+
+    /*
+     * We can write a copy constructor (as an alternative to a copy method like we wrote below).
+     */
+    public Rectangle(Rectangle original){
+        length = original.length;
+        width = original.width;
+    }
+
 
     /*
      * The Rectangle class has (public) "instance methods",
@@ -55,8 +74,6 @@ public class Rectangle {
     }
 
     public boolean equals(Rectangle other) {
-        // placeholder
-        // TODO: Complete this part!
         return (length == other.length) && (width == other.width);
     }
 
@@ -71,7 +88,8 @@ public class Rectangle {
         width = wid;
     }
 
-    public Rectangle copy(Rectangle other) {
-        return;
+    public Rectangle copy() {
+        Rectangle r = new Rectangle(length, width);
+        return r;
     }
 }
