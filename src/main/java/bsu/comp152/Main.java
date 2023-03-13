@@ -68,5 +68,14 @@ public class Main {
         ArrayList<Rectangle> rectangleList = new ArrayList<Rectangle>();
         rectangleList.add(rect);
         rectangleList.add(rect2);
+        System.out.println("Rect3 is a square: " + rect3.isSquare());
+        rect3.setWidth(5.2);
+        System.out.println(rect3);
+        System.out.println("Rect3 is a square: " + rect3.isSquare());
+        rect3.getArea();
+        System.out.printf("Area of rect3: %f\n", rect3.getArea());
+        System.out.println(rect5);
+        rect5.rotate();
+        System.out.println(rect5);
     }
 }

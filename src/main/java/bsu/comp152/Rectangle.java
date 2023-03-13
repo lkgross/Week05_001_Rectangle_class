@@ -47,7 +47,6 @@ public class Rectangle {
         width = original.width;
     }
 
-
     /*
      * The Rectangle class has (public) "instance methods",
      * e.g., getLength, getWidth, setLength.
@@ -66,6 +65,20 @@ public class Rectangle {
 
     public double getWidth() {
         return width;
+    }
+
+    public boolean isSquare(){
+        return length == width;
+    }
+
+    public double getArea(){
+        return length*width;
+    }
+
+    public void rotate(){
+        double temp = length;
+        length = width;
+        width = temp;
     }
 
     @Override
@@ -92,4 +105,6 @@ public class Rectangle {
         Rectangle r = new Rectangle(length, width);
         return r;
     }
+
+
 }
