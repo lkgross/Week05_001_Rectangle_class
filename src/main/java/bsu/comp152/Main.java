@@ -77,5 +77,8 @@ public class Main {
         System.out.println(rect5);
         rect5.rotate();
         System.out.println(rect5);
+
+        Rectangle[] rectArray = new Rectangle[100];
+        Rectangle[] rectArray2 = {rect, rect2};
     }
 }
